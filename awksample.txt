@@ -1,0 +1,8 @@
+Name Roll Marks Sex
+megha 111 90 F:test
+Subir 112:test 91 M
+Nivay 70 70:TEST M
+11
+khan 114 71 M
+Rizzu 115 115 M:123
+nusrat 116 99 F:AB1

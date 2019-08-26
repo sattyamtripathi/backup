@@ -1,0 +1,6 @@
+[webservers]
+13.233.183.127 ansible_user=ec2-user
+
+[ubuntu_host]
+13.233.81.224 ansible_user=ubuntu
+

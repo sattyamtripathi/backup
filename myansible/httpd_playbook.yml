@@ -1,0 +1,27 @@
+---
+- name: This sets up an httpd webserver
+  sudo: yes
+  hosts: webservers
+  vars:
+          motd_message: "Welcome to Ansible lesson!!"
+  tasks:
+          - name: sample motd
+            copy:
+                    dest: /etc/motd
+                    content: "{{motd_message}}"
+          - name: Install httpd packages
+            yum:
+                    name: httpd
+                    state: present
+          - name: httpd listen on port 80
+            lineinfile: dest=/etc/httpd/conf/httpd.conf regexp="^Listen 80" line="Listen 80" state=present
+            notify:
+                    - restart httpd
+
+          - name: ensure httpd is running
+            service:
+                    name: httpd
+                    state: started
+  handlers:
+          - name: restart httpd
+            service: name=httpd state=restarted

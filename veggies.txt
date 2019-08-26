@@ -1,0 +1,10 @@
+	11111
+	10101
+	11100
+	Banana
+	brocoli
+	carrot
+	potato
+	tomato
+	onion
+	Papaya
